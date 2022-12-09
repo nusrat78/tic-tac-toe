@@ -1,5 +1,6 @@
 #include <stdio.h>
 char box[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+char box2[10] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 void createBoard();
 int checkWinner();
 int main()
@@ -9,6 +10,7 @@ int main()
 
     while (1)
     {
+        gamereset();
         printf("Game menu\n");
         printf("1. Play tic tac toe\n");
         printf("2. Quit tic tac toe\n");
@@ -135,5 +137,13 @@ int checkWinner()
     else
     {
         return -1;
+    }
+}
+void gamereset()
+{
+    for (int g = 0; g < 9; g++)
+    {
+
+        box[g] = box2[g];
     }
 }
